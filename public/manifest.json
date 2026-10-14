@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "Onitawa's Catering & Eatery",
+  "short_name": "Onitawa",
+  "description": "Order authentic Nigerian catering delicacies with live courier tracking, coupon code verification, and automated kitchen notification.",
+  "theme_color": "#09090b",
+  "background_color": "#09090b",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/src/assets/images/onitawas_hero_feast_1791846460688.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/src/assets/images/onitawas_hero_feast_1791846460688.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Onitawa's Catering & Eatery",
+  "description": "Order authentic delicacies from Onitawa's Catering Service with live courier tracking, coupon code verification, WhatsApp admin duplicate dispatch, and automated kitchen call notification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

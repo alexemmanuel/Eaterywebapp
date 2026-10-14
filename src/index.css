@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #09090b;
+    color: #f4f4f5;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Modernized Astro-style UI / UX Visual Tokens */
+.astro-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(18, 18, 22, 0.85) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.astro-glass-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.astro-glass-hover:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(24, 24, 30, 0.95) 100%);
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 20px -5px rgba(245, 158, 11, 0.15);
+}
+
+.astro-glow-amber {
+  box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.2);
+}
+
+.astro-glow-emerald {
+  box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.25);
+}
+
+/* Ticket perforation effect */
+.astro-ticket-notch {
+  position: relative;
+}
+.astro-ticket-notch::before,
+.astro-ticket-notch::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #09090b;
+  border-radius: 9999px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.astro-ticket-notch::before {
+  left: -8px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.astro-ticket-notch::after {
+  right: -8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Custom smooth dark scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Receipt & Ticket Print Media Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  /* Hide all non-printable elements */
+  nav, footer, .print\\:hidden, button, [role="dialog"] > div > div:first-child {
+    display: none !important;
+  }
+
+  #printable-ticket-content {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    box-shadow: none !important;
+    padding: 16px !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+  }
+
+  #printable-ticket-content * {
+    color: #000000 !important;
+    background: transparent !important;
+    border-color: #666666 !important;
+    text-shadow: none !important;
+  }
+}
